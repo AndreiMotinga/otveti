@@ -1,12 +1,7 @@
 {
-  "name": "client",
+  "name": "ezanswer",
   "version": "0.1.0",
   "private": false,
-  "proxy": {
-    "/api": {
-      "target": "http://localhost:3000"
-    }
-  },
   "devDependencies": {
     "husky": "^0.14.3",
     "prettier": "^1.12.1",
@@ -37,6 +32,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && aws s3 sync build/ s3://ezanswer"
+    "deploy": "yarn run build && aws s3 sync build/ s3://ezanswer"
   }
 }
